@@ -1,0 +1,18 @@
+<% for msg in @msgs -%>
+<div id=msgs>
+
+   <ul>
+    <li><%= link_to image_tag("/images/notlike.jpg"), notlike_msg_path(msg), :method => :put %></li>
+    <li><%= link_to image_tag("/images/like.jpg"), like_msg_path(msg), :method => :put %></li>
+  </ul>
+
+
+  <h3><%=h msg.city %></h3>
+  <br />
+  <%= msg.content %>
+  <br />
+    	<br />
+    <hr />
+</div>
+<% end %>
+

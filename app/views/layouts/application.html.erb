@@ -1,0 +1,63 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title> ערים | <%= @title %></title>
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+  </head>
+  <body>
+   <div id="wrapper">
+         	<div id="logo">
+	        <h1><a href="#">ערים</a></h1>		
+        	</div>
+	
+                <hr />
+
+                <div id="menu">
+			<ul>
+				 <li><%= link_to "צור חדש", new_path %></li>
+                                 <li><%= link_to "הגרועים", worst_path %></li>
+                                 <li><%= link_to "הטובים",  best_path %></li>
+                                 <li><%= link_to "החדשים",  root_path %></li>
+			</ul>
+		</div>
+<br />
+   <div id="page">
+ <div id="sidebar">
+		<ul>
+			<li>
+				<h2>ברוכים הבאים</h2>
+				<p>טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט טקסט</p>
+			</li>
+
+
+<li>
+				<h2>פרסומת</h2>
+				<p>בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה </p>
+			</li>
+			
+		</ul>
+	</div>
+
+   	<div id="content">
+           <%= yield %>
+        </div>
+   
+
+      
+
+   <hr />
+
+
+   </div>
+
+
+  </div>
+
+ </body>
+
+</html>

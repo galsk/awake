@@ -1,0 +1,24 @@
+<h1>Editing msg</h1>
+
+<% form_for(@msg) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label : city %><br />
+    <%= f.text_field : city %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :score %><br />
+    <%= f.text_field :score %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @msg %> |
+<%= link_to 'Back', msgs_path %>

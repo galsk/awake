@@ -1,0 +1,26 @@
+<h1>Listing msgs</h1>
+
+<table>
+  <tr>
+    <th> city</th>
+    <th>Content</th>
+    <th>Score</th>
+  </tr>
+
+<% @msgs.each do |msg| %>
+  <tr>
+    <td><%=h msg. city %></td>
+    <td><%=h msg.content %></td>
+    <td><%=h msg.score %></td>
+    <td><%= link_to 'Show', msg %></td>
+    <td><%= link_to 'Edit', edit_msg_path(msg) %></td>
+    <td><%= link_to 'Destroy', msg, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Like', like_msg_path(msg), :method => :put %></td>
+    <td><%= link_to 'Not Like', notlike_msg_path(msg), :method => :put %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New msg', new_msg_path %>

@@ -1,0 +1,21 @@
+<h1>ההודעה שלך</h1>
+
+<div id=createmsg>
+
+<p>
+  <b> עיר:</b>
+  <%=h @msg. city %>
+</p>
+
+<p>
+  <b>תוכן:</b>
+  <%=h @msg.content %>
+</p>
+
+</div>
+
+
+<%= link_to 'ערוך', edit_msg_path(@msg) %> |
+<%= link_to 'שלח', root_path %>
+
+
